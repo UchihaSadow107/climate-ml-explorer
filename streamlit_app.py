@@ -10,7 +10,7 @@ import streamlit as st
 
 @st.cache_resource
 def extract_project():
-    archive_path = Path(__file__).resolve().parent / "climate-ml-project.zip"
+    archive_path = Path(__file__).resolve().parent / "climate-ml-app-bundle.zip"
     project_root = Path(tempfile.mkdtemp(prefix="climate-ml-explorer-")).resolve()
     with zipfile.ZipFile(archive_path) as archive:
         for member in archive.infolist():
